@@ -1,0 +1,241 @@
+import {IProject} from "../types/IProject.tsx";
+
+export const sampleProjects: IProject[] = [
+    {
+        projectId: 1,
+        projectName: "Project A",
+        high_risks: 2,
+        medium_risks: 2,
+        low_risks: 1,
+        critical: "High", // par exemple, si on considère que le risque "dominant" est High
+        projectRisks: {
+            qualityRisks: [
+                {
+                    id: 1,
+                    message: "Missing unit tests for new feature",
+                    criteria: "Quality",
+                    critical: "High",
+                    date: "2024-01-10",
+                },
+                {
+                    id: 2,
+                    message: "Documentation incomplete for onboarding",
+                    criteria: "Quality",
+                    critical: "Medium",
+                    date: "2024-02-25",
+                },
+            ],
+            costsRisks: [
+                {
+                    id: 3,
+                    message: "Budget underestimated for third-party service",
+                    criteria: "Costs",
+                    critical: "High",
+                    date: "2024-03-01",
+                },
+                {
+                    id: 4,
+                    message: "Potential cost overrun in hardware purchases",
+                    criteria: "Costs",
+                    critical: "Medium",
+                    date: "2024-03-15",
+                },
+            ],
+            delayRisks: [
+                {
+                    id: 5,
+                    message: "Team training not scheduled, risk of delay",
+                    criteria: "Delay",
+                    critical: "Low",
+                    date: "2024-04-05",
+                },
+            ],
+        },
+    },
+    {
+        projectId: 2,
+        projectName: "Project B",
+        high_risks: 4,
+        medium_risks: 5,
+        low_risks: 3,
+        critical: "High",
+        projectRisks: {
+            qualityRisks: [
+                {
+                    id: 1,
+                    message: "Integration tests failing sporadically",
+                    criteria: "Quality",
+                    critical: "High",
+                    date: "2024-01-10",
+                },
+                {
+                    id: 2,
+                    message: "No code review process in place",
+                    criteria: "Quality",
+                    critical: "Medium",
+                    date: "2024-01-15",
+                },
+                {
+                    id: 3,
+                    message: "Inconsistent coding conventions",
+                    criteria: "Quality",
+                    critical: "Low",
+                    date: "2024-01-20",
+                },
+                {
+                    id: 4,
+                    message: "Outdated library versions used in critical paths",
+                    criteria: "Quality",
+                    critical: "Medium",
+                    date: "2024-02-01",
+                },
+            ],
+            costsRisks: [
+                {
+                    id: 5,
+                    message: "Licensing fees not accounted for third-party software",
+                    criteria: "Costs",
+                    critical: "High",
+                    date: "2024-02-10",
+                },
+                {
+                    id: 6,
+                    message: "Unplanned expenses for consultant support",
+                    criteria: "Costs",
+                    critical: "Medium",
+                    date: "2024-02-15",
+                },
+                {
+                    id: 7,
+                    message: "Inaccurate cost estimates for cloud usage",
+                    criteria: "Costs",
+                    critical: "High",
+                    date: "2024-02-20",
+                },
+                {
+                    id: 8,
+                    message: "Delayed invoice payments from vendor",
+                    criteria: "Costs",
+                    critical: "Low",
+                    date: "2024-02-25",
+                },
+            ],
+            delayRisks: [
+                {
+                    id: 9,
+                    message: "Key team member on extended leave",
+                    criteria: "Delay",
+                    critical: "Medium",
+                    date: "2024-03-01",
+                },
+                {
+                    id: 10,
+                    message: "Delivery of essential hardware is behind schedule",
+                    criteria: "Delay",
+                    critical: "High",
+                    date: "2024-03-05",
+                },
+                {
+                    id: 11,
+                    message: "Project dependencies not well defined, risk of rework",
+                    criteria: "Delay",
+                    critical: "Medium",
+                    date: "2024-03-10",
+                },
+                {
+                    id: 12,
+                    message: "Team overlap with another project, resource conflict",
+                    criteria: "Delay",
+                    critical: "Low",
+                    date: "2024-03-15",
+                },
+            ],
+        },
+    },
+    {
+        projectId: 3,
+        projectName: "Project C",
+        high_risks: 2,
+        medium_risks: 4,
+        low_risks: 4,
+        critical: "Medium",
+        projectRisks: {
+            qualityRisks: [
+                {
+                    id: 1,
+                    message: "Unit tests coverage below 50%",
+                    criteria: "Quality",
+                    critical: "Low",
+                    date: "2024-04-01",
+                },
+                {
+                    id: 2,
+                    message: "Frequent merges causing environment conflicts",
+                    criteria: "Quality",
+                    critical: "High",
+                    date: "2024-04-05",
+                },
+                {
+                    id: 3,
+                    message: "No dedicated QA engineer assigned",
+                    criteria: "Quality",
+                    critical: "Medium",
+                    date: "2024-04-10",
+                },
+            ],
+            costsRisks: [
+                {
+                    id: 4,
+                    message: "Unexpected licensing model changes",
+                    criteria: "Costs",
+                    critical: "High",
+                    date: "2024-05-01",
+                },
+                {
+                    id: 5,
+                    message: "Travel expenses for on-site visits not budgeted",
+                    criteria: "Costs",
+                    critical: "Low",
+                    date: "2024-05-05",
+                },
+                {
+                    id: 6,
+                    message: "Potential currency exchange rate fluctuations",
+                    criteria: "Costs",
+                    critical: "Medium",
+                    date: "2024-05-10",
+                },
+            ],
+            delayRisks: [
+                {
+                    id: 7,
+                    message: "Long lead time for specialized equipment",
+                    criteria: "Delay",
+                    critical: "Low",
+                    date: "2024-06-01",
+                },
+                {
+                    id: 8,
+                    message: "Limited availability of key stakeholder for approvals",
+                    criteria: "Delay",
+                    critical: "Medium",
+                    date: "2024-06-05",
+                },
+                {
+                    id: 9,
+                    message: "Holiday season scheduling conflicts",
+                    criteria: "Delay",
+                    critical: "Low",
+                    date: "2024-06-10",
+                },
+                {
+                    id: 10,
+                    message: "Potential scope creep not clearly addressed",
+                    criteria: "Delay",
+                    critical: "Medium",
+                    date: "2024-06-15",
+                },
+            ],
+        },
+    },
+];
